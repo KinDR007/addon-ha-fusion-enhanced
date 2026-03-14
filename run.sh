@@ -16,10 +16,16 @@ else
 fi
 
 # Set data directory
-export DATA_PATH="/config/ha-fusion"
+export DATA_PATH="/config/ha-fusion-enhanced"
 mkdir -p "${DATA_PATH}"
+
+# Link data directory
+if [ ! -L "/app/data" ]; then
+    rm -rf /app/data
+    ln -s "${DATA_PATH}" /app/data
+fi
 
 # Start ha-fusion
 cd /app
-bashio::log.info "Starting Node.js server..."
-npm start
+bashio::log.info "Starting Node.js server on port 5050..."
+node build/index.js

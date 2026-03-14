@@ -1,90 +1,79 @@
-# ha-fusion Enhanced - Home Assistant Add-on
-
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
+# ha-fusion Enhanced
 
 Modern Home Assistant dashboard with enhanced button layouts.
 
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armv7 Architecture][armv7-shield]
+
 ## About
 
-This is an enhanced version of ha-fusion with additional features:
+This add-on provides ha-fusion Enhanced - a modern, customizable Home Assistant dashboard with powerful layout options.
 
-- ✨ **4 button layout options**: Rectangle, Square, Small Square, Icon-only
-- ✨ **Multiline text support** for all layouts
-- ✨ **Flexible separator sizing** to match button sizes
-- ✨ **4x more compact layouts** with icon-only buttons
-- 🌍 **Translated** in English and Czech
+### Enhanced Features
+
+- **4 Button Layout Options**:
+  - Rectangle (default) - standard horizontal layout
+  - Square - compact square with multiline text
+  - Small Square - half-width square
+  - Icon-only - ultra-compact, 4 fit in space of 1 regular button
+
+- **Multiline Text Support**: Enable word-wrapping for button names and states
+
+- **Flexible Grid System**: Mix different button sizes on same dashboard
+
+- **Czech Translation**: Full Czech language support
 
 ## Installation
 
-1. Add this repository to your Home Assistant add-on store:
-   - Click the button below, or
-   - Go to **Settings** → **Add-ons** → **Add-on Store** → **⋮** → **Repositories**
+1. Add the repository to your Home Assistant:
+   - Go to **Settings** → **Add-ons** → **Add-on Store**
+   - Click **⋮** → **Repositories**
    - Add: `https://github.com/KinDR007/addon-ha-fusion-enhanced`
 
-2. Click **Add** to add the repository
+2. Find **ha-fusion Enhanced** in the store and click **Install**
 
-3. Refresh the add-on store page
+3. Wait for build to complete (5-10 minutes on first install)
 
-4. Find "ha-fusion Enhanced" and click **Install**
+4. Click **Start**
 
-5. Start the add-on
-
-6. Open the Web UI
+5. Access via sidebar or Ingress
 
 ## Configuration
 
-The add-on works out of the box with Home Assistant Ingress.
-
-### Optional Configuration
-
 ```yaml
-HASS_URL: ""  # Leave empty to use Ingress (recommended)
+HASS_URL: ""
 ```
 
-If you need to specify a custom Home Assistant URL:
+### Option: `HASS_URL`
 
-```yaml
-HASS_URL: "http://homeassistant.local:8123"
-```
+Leave empty (default) to use Home Assistant Ingress. Only set if you need a specific URL.
 
-## Features
+## How to Use
 
-### Button Layouts
-
-Choose from 4 different button layouts in the configuration:
-
-1. **Rectangle** - Classic horizontal layout
-2. **Square** - Balanced square with icon on top
-3. **Small Square** - Compact half-width square
-4. **Icon Only** - Ultra-compact icon-only button
-
-### Multiline Text
-
-Enable multiline text to prevent truncation of long names and states.
-
-### Flexible Separators
-
-Match separator sizes to your button layouts for perfect alignment.
+1. Open the dashboard via sidebar
+2. Click **Edit** mode (top right)
+3. Add or edit buttons
+4. Select **Layout** option:
+   - Rectangle (4 grid units wide)
+   - Square (4 grid units, square aspect)
+   - Small Square (2 grid units, square aspect)
+   - Icon-only (1 grid unit, minimal)
+5. Toggle **Multiline** for text wrapping
+6. Save your changes
 
 ## Support
 
-For issues with enhanced layouts:
-- https://github.com/KinDR007/ha-fusion-enhanced/issues
-
-For general ha-fusion issues:
-- https://github.com/matt8707/ha-fusion
+For issues and feature requests, visit:
+- Main repository: [ha-fusion-enhanced](https://github.com/KinDR007/ha-fusion-enhanced)
+- Add-on repository: [addon-ha-fusion-enhanced](https://github.com/KinDR007/addon-ha-fusion-enhanced)
 
 ## Credits
 
-- Original project: [ha-fusion by matt8707](https://github.com/matt8707/ha-fusion)
-- Enhanced layouts: [KinDR007](https://github.com/KinDR007)
+Based on [ha-fusion](https://github.com/matt8707/ha-fusion) by matt8707.
+
+Enhanced with custom layouts by KinDR007.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
